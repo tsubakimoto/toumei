@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Toumei</title>
+  <link rel="stylesheet" media="all" href="style.css">
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+  <script src="purl.js"></script>
+</head>
+<body>
+  <header>
+    Toumei
+  </header>
+  <main>
+    <div id="rgba01" class="box">0.1</div>
+    <div id="rgba02" class="box">0.2</div>
+    <div id="rgba03" class="box">0.3</div>
+    <div id="rgba04" class="box">0.4</div>
+    <div id="rgba05" class="box">0.5</div>
+    <div id="rgba06" class="box">0.6</div>
+    <div id="rgba07" class="box">0.7</div>
+    <div id="rgba08" class="box">0.8</div>
+    <div id="rgba09" class="box">0.9</div>
+    <div id="rgba10" class="box">1.0</div>
+  </main>
+  <footer>
+    Built by <a href="https://twitter.com/tsubakimoto_s">@tsubakimoto_s</a>
+  </footer>
+  <script>
+    $('#url').text($.url().param('hex'));
+  </script>
+</body>
+</html>
