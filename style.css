@@ -6,7 +6,7 @@ body {
   font-family: sans-serif;
 }
 
-header, footer, .box {
+.box {
   line-height: 2em;
   text-align: center;
 }
