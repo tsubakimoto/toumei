@@ -22,13 +22,13 @@
     <div id="rgba10" class="box" data-alpha="1.0"></div>
   </main>
   <script>
-    var param = $.url().fsegment(1);
+    var param = $.url().attr('fragment');
     for (var i = 1; i <= 10; i++) {
       var box = $('#rgba' + i);
-      var color = ConvertToRgbaColor(param, parseFloat($(box).data('alpha')));
+      var color = ConvertToRgbaColor(param, parseFloat(box.data('alpha')));
       var rgba = FormatToRgba(color);
       var hex = ConvertToHexColor(color);
-      $(box).css('background-color', rgba).text(hex);
+      box.css('background-color', rgba).text(hex);
     }
   </script>
 </body>
