@@ -2,34 +2,30 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Toumei</title>
-  <link rel="stylesheet" media="all" href="style.css">
-  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
-  <script src="purl.js"></script>
-  <script src="script.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-  <main>
-    <div id="rgba1" class="box" data-alpha="0.1"></div>
-    <div id="rgba2" class="box" data-alpha="0.2"></div>
-    <div id="rgba3" class="box" data-alpha="0.3"></div>
-    <div id="rgba4" class="box" data-alpha="0.4"></div>
-    <div id="rgba5" class="box" data-alpha="0.5"></div>
-    <div id="rgba6" class="box" data-alpha="0.6"></div>
-    <div id="rgba7" class="box" data-alpha="0.7"></div>
-    <div id="rgba8" class="box" data-alpha="0.8"></div>
-    <div id="rgba9" class="box" data-alpha="0.9"></div>
-    <div id="rgba10" class="box" data-alpha="1.0"></div>
-  </main>
+  <div class="container">
+    <div class="row text-center">
+      <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">#</div>
+            <input type="text" id="color" class="form-control" placeholder="FFFFFF">
+          </div>
+        </div>
+        <button id="submit" class="btn btn-primary">Go!</button>
+      </form>
+    </div>
+  </div>
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
   <script>
-    var param = $.url().attr('fragment');
-    for (var i = 1; i <= 10; i++) {
-      var box = $('#rgba' + i);
-      var color = ConvertToRgbaColor(param, parseFloat(box.data('alpha')));
-      var rgba = FormatToRgba(color);
-      var hex = ConvertToHexColor(color);
-      box.css('background-color', rgba).text(hex);
-    }
+    $('#submit').click(function(e) {
+      e.preventDefault();
+      window.location.href = '/#' + $('#color').val();
+    });
   </script>
 </body>
 </html>
