@@ -9,6 +9,12 @@
 <body>
   <div class="container">
     <div class="row text-center">
+      <div class="page-header">
+        <h1>Toumei</h1>
+        <p>Designed by <a href="https://twitter.com/tsubakimoto_s">@tsubakimoto_s</a></p>
+      </div>
+    </div>
+    <div class="row text-center">
       <form class="form-inline">
         <div class="form-group">
           <div class="input-group">
@@ -16,7 +22,7 @@
             <input type="text" id="color" class="form-control" placeholder="FFFFFF">
           </div>
         </div>
-        <button id="submit" class="btn btn-primary">Go!</button>
+        <button id="submit" class="btn btn-primary">Get RGBA</button>
       </form>
     </div>
   </div>
@@ -24,7 +30,7 @@
   <script>
     $('#submit').click(function(e) {
       e.preventDefault();
-      window.location.href = '/#' + $('#color').val();
+      window.location.href = '/palette.html#' + $('#color').val();
     });
   </script>
 </body>
