@@ -1,4 +1,11 @@
 /*
+ * ベースのURLを取得する
+ */
+function GetBaseUrl() {
+  return $.url().attr('directory');
+}
+
+/*
  * 16進数をrgba値に整形する
  */
 function ConvertToRgbaColor(hex, alpha) {

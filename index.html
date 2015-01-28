@@ -19,7 +19,7 @@
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">#</div>
-            <input type="text" id="color" class="form-control" placeholder="FFFFFF">
+            <input type="text" id="color" class="form-control" placeholder="FFFFFF" maxlength="6">
           </div>
         </div>
         <button id="submit" class="btn btn-primary">Get RGBA</button>
@@ -27,10 +27,12 @@
     </div>
   </div>
   <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+  <script src="purl.js"></script>
+  <script src="script.js"></script>
   <script>
     $('#submit').click(function(e) {
       e.preventDefault();
-      window.location.href = '/palette.html#' + $('#color').val();
+      window.location.href = GetBaseUrl() + 'palette.html#' + $('#color').val();
     });
   </script>
 </body>
