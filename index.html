@@ -30,6 +30,8 @@
   <script src="purl.js"></script>
   <script src="script.js"></script>
   <script>
+    LoadAnalytics();
+    
     $('#submit').click(function(e) {
       e.preventDefault();
       window.location.href = GetBaseUrl() + 'palette.html#' + $('#color').val();
